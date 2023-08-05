@@ -21,30 +21,32 @@ class HomePage extends StatelessWidget {
       length: tabOption.length,
       child: Scaffold(
           extendBody: true,
-          body: const Column(
-            children: [
-              SearchNav(),
-              TabBar(
-                // indicatorSize: TabBarIndicatorSize.tab,
-                automaticIndicatorColorAdjustment: true,
-                labelStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.normal, fontFamily: 'Quicksand'),
-                unselectedLabelStyle: TextStyle(fontSize: 15, fontWeight: FontWeight.normal, fontFamily: 'Quicksand'),
-                tabs: [
-                  Tab(text: "Recent"),
-                  Tab(text: "Trending"),
-                  Tab(text: "Top"),
-                ],
-              ),
-              Expanded(
-                child: TabBarView(
-                  children: [
-                    RecentTab(),
-                    TrendingTab(),
-                    TopTab(),
+          body: const SafeArea(
+            child: Column(
+              children: [
+                SearchNav(),
+                TabBar(
+                  // indicatorSize: TabBarIndicatorSize.tab,
+                  automaticIndicatorColorAdjustment: true,
+                  labelStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.normal, fontFamily: 'Quicksand'),
+                  unselectedLabelStyle: TextStyle(fontSize: 15, fontWeight: FontWeight.normal, fontFamily: 'Quicksand'),
+                  tabs: [
+                    Tab(text: "Recent"),
+                    Tab(text: "Trending"),
+                    Tab(text: "Top"),
                   ],
                 ),
-              ),
-            ],
+                Expanded(
+                  child: TabBarView(
+                    children: [
+                      RecentTab(),
+                      TrendingTab(),
+                      TopTab(),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
           bottomNavigationBar: Container(
             margin: const EdgeInsets.all(10),
