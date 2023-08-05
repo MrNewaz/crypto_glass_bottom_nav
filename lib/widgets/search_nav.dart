@@ -12,7 +12,7 @@ class SearchNav extends StatelessWidget {
           const Expanded(
             child: Text(
               'Explore Collections',
-              style: TextStyle(fontSize: 52, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 46, fontWeight: FontWeight.bold),
             ),
           ),
           Container(

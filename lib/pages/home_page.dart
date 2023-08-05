@@ -2,7 +2,7 @@ import 'package:crypto_glass_app/tabs/recent.dart';
 import 'package:crypto_glass_app/tabs/top.dart';
 import 'package:crypto_glass_app/tabs/trending.dart';
 import 'package:crypto_glass_app/util/glass_box.dart';
-import 'package:crypto_glass_app/widgets/app_bar.dart';
+import 'package:crypto_glass_app/widgets/search_nav.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,8 +27,8 @@ class HomePage extends StatelessWidget {
               TabBar(
                 // indicatorSize: TabBarIndicatorSize.tab,
                 automaticIndicatorColorAdjustment: true,
-                labelStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                unselectedLabelStyle: TextStyle(fontSize: 15, fontWeight: FontWeight.normal),
+                labelStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.normal, fontFamily: 'Quicksand'),
+                unselectedLabelStyle: TextStyle(fontSize: 15, fontWeight: FontWeight.normal, fontFamily: 'Quicksand'),
                 tabs: [
                   Tab(text: "Recent"),
                   Tab(text: "Trending"),
